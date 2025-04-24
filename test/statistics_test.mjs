@@ -13,7 +13,9 @@ describe('Statistics', () => {
         const computedStats = computeStatistics([]);
         // All fields of computedStats (average, max, min) must be
         // NAN (not-a-number)
-        // Design the expect statement here.
+        isNaN(computedStats.average).to.be.true;
+        isNaN(computedStats.min).to.be.true;
+        isNaN(computedStats.max).to.be.true;
         // Use https://www.w3schools.com/jsref/jsref_isnan.asp
     });
 });
