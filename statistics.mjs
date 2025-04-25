@@ -2,6 +2,14 @@
 export function computeStatistics(numbers){
     
     // implement the computation of statistics here
+    if (numbers.length === 0) {
+        return {
+            average: NaN,
+            min: NaN,
+            max: NaN
+        };
+    }
+
     const total = numbers.reduce((sum, num) => sum + num, 0);
     const average = total / numbers.length;
     const min = Math.min(...numbers);
